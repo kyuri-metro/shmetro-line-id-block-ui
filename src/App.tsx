@@ -1,10 +1,7 @@
 import { useEffect, useMemo, useState, type ChangeEvent } from 'react'
 import { detectWindowsArial } from './arialSignature'
-import {
-  generateLineBadgeSvg,
-  getShanghaiMetroPalette,
-  type BadgeVersion,
-} from './lineIdGenerators'
+import { generateLineBadgeSvg, type BadgeVersion } from './lineIdGenerators'
+import { getShanghaiMetroPalette, parseLineNumber } from './lineIdUiShared'
 
 type ThemeMode = 'light' | 'dark'
 
@@ -35,12 +32,7 @@ function applyThemeMode(themeMode: ThemeMode) {
 }
 
 function isValidLineNumber(value: string) {
-  if (!value) {
-    return false
-  }
-
-  const lineId = Number.parseInt(value, 10)
-  return lineId >= 1 && lineId <= 29
+  return parseLineNumber(value) !== null
 }
 
 function downloadSvg(fileName: string, svgContent: string) {
@@ -62,6 +54,7 @@ function App() {
   const [themeMode, setThemeMode] = useState<ThemeMode>(() => getInitialThemeMode())
   const [version, setVersion] = useState<BadgeVersion>('2024')
   const [lineNumber, setLineNumber] = useState('16')
+  const [badgeHeight, setBadgeHeight] = useState('100')
   const [useShanghaiMetroColors, setUseShanghaiMetroColors] = useState(true)
   const [foreground, setForeground] = useState(initialPalette.foreground)
   const [background, setBackground] = useState(initialPalette.background)
@@ -69,6 +62,8 @@ function App() {
   const [fontDetectionState, setFontDetectionState] = useState<'checking' | 'done'>('checking')
 
   const validLineNumber = isValidLineNumber(lineNumber)
+  const validBadgeHeight = Number.isFinite(Number(badgeHeight)) && Number(badgeHeight) > 0
+  const canGenerate = validLineNumber && validBadgeHeight
 
   useEffect(() => {
     applyThemeMode(themeMode)
@@ -94,17 +89,18 @@ function App() {
   }, [])
 
   const previewSvg = useMemo(() => {
-    if (!validLineNumber) {
+    if (!canGenerate) {
       return ''
     }
 
     return generateLineBadgeSvg({
       version,
       lineNumber,
+      height: Number(badgeHeight),
       foreground,
       background,
     })
-  }, [background, foreground, lineNumber, validLineNumber, version])
+  }, [background, badgeHeight, canGenerate, foreground, lineNumber, version])
 
   const fileStem = validLineNumber ? `line-${lineNumber}-${version}` : `line-${version}`
 
@@ -171,10 +167,10 @@ function App() {
           </button>
         </div>
         <h1>上海地铁线路号方块生成器</h1>
-        <p className="lead">用于生成上海地铁风格线路号方块 SVG。</p>
+        <p className="lead">生成并导出上海地铁风格线路号方块 SVG。</p>
         <div className="docs-callout">
           <strong>关于本页</strong>
-          <p>支持切换 2020 / 2024 两套线路号方块参数，并导出标准 SVG。</p>
+          <p>支持切换 2020 / 2024 两套参数，并导出标准 SVG。</p>
         </div>
         <div className="inline-links" aria-label="外部链接">
           <a href="https://github.com/Unnamed2964/kyuri-shmetro-line-id-block-generator" target="_blank" rel="noreferrer">
@@ -236,12 +232,26 @@ function App() {
               type="text"
               inputMode="numeric"
               maxLength={2}
-              placeholder="例如：2、10、16（仅支持 1~29）"
+                placeholder="例如：0、10、16、99（支持 0~99）"
               value={lineNumber}
               onChange={handleLineNumberChange}
               aria-invalid={lineNumber ? !validLineNumber : undefined}
             />
           </label>
+
+            <label className="field-label" htmlFor="badge-height-input">
+              <span>高度</span>
+              <input
+                id="badge-height-input"
+                className="text-input"
+                type="number"
+                min="1"
+                step="1"
+                value={badgeHeight}
+                onChange={(event) => setBadgeHeight(event.target.value)}
+                aria-invalid={badgeHeight ? !validBadgeHeight : undefined}
+              />
+            </label>
 
           <label className="checkbox-row">
             <input
@@ -288,7 +298,7 @@ function App() {
             </div>
           </div>
           <div className="result-actions">
-            <button className="secondary-button" type="button" onClick={handleStandardDownload} disabled={!validLineNumber}>
+            <button className="secondary-button" type="button" onClick={handleStandardDownload} disabled={!canGenerate}>
               下载 SVG
             </button>
           </div>
