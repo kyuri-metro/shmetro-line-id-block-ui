@@ -4,6 +4,22 @@
   line-height: 1.12;
 }
 
+:root.theme-transition-lock button,
+:root.theme-transition-lock input,
+:root.theme-transition-lock select,
+:root.theme-transition-lock textarea,
+:root.theme-transition-lock .theme-toggle,
+:root.theme-transition-lock .ghost-button,
+:root.theme-transition-lock .action-button,
+:root.theme-transition-lock .primary-button,
+:root.theme-transition-lock .secondary-button,
+:root.theme-transition-lock .icon-button,
+:root.theme-transition-lock .danger-button,
+:root.theme-transition-lock .text-input,
+:root.theme-transition-lock .solver-select {
+  transition: none !important;
+}
+
 .generator-page h2 {
   margin-bottom: 14px;
   font-size: 1.28rem;
