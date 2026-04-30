@@ -289,9 +289,7 @@ function App() {
 
       <section className="panel result-panel">
         <h2>结果</h2>
-        <p className="panel-subtitle">实时预览当前参数生成的线路号方块。</p>
         <div className="result-block">
-          <h3>Line ID Block</h3>
           <div className="badge-preview">
             <div className={`preview-canvas${previewSvg ? ' has-svg' : ''}`}>
               {previewSvg ? <div dangerouslySetInnerHTML={{ __html: previewSvg }} /> : '输入线路号码即可预览效果。'}
