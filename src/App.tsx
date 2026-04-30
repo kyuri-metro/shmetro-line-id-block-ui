@@ -197,11 +197,11 @@ function App() {
           <p>支持切换 2020 / 2025 两套参数，并导出标准 SVG。</p>
         </div>
         <div className="inline-links" aria-label="外部链接">
-          <a href="https://github.com/Unnamed2964/kyuri-shmetro-line-id-block-generator" target="_blank" rel="noreferrer">
-            旧版 GitHub 仓库
-          </a>
           <a href="https://github.com/kyuri-metro/shmetro-line-id-block-ui" target="_blank" rel="noreferrer">
-            GitHub 主页
+            GitHub 仓库
+          </a>
+          <a href="https://github.com/unnamed2964" target="_blank" rel="noreferrer">
+            作者 GitHub 主页
           </a>
           <a href="https://umamichi.moe/" target="_blank" rel="noreferrer">
             作者博客
