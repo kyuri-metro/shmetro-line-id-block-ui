@@ -6,11 +6,12 @@
 
 - -ui：当前仓库，负责页面、表单、实时预览、导出与字体检测
 - -2020-svg-generator：2020 版 SVG 生成逻辑仓库
-- -2024-svg-generator：2024 版 SVG 生成逻辑仓库
+- -2025-svg-generator：2025 版 SVG 生成逻辑仓库
 
-当前 UI 通过依赖两个已发布的 SVG 生成 npm 包来完成 2020 / 2024 两套导出。
+当前 UI 通过依赖两个已发布的 SVG 生成 npm 包来完成 2020 / 2025 两套导出。
 
 ## 统一参数规格
+支持在页面中切换 2020 / 2025 两套线路号方块参数
 
 - 前景色 foreground
 - 背景色 background
@@ -20,7 +21,7 @@
 当前 UI 侧使用的两个独立 npm 包为：
 
 - @kyuri-metro/shmetro-line-id-block-2020-svg-generator
-- @kyuri-metro/shmetro-line-id-block-2024-svg-generator
+- @kyuri-metro/shmetro-line-id-block-2025-svg-generator
 
 统一导出入口位于：
 
@@ -28,7 +29,7 @@
 
 ## 当前特性
 
-- 支持在页面中切换 2020 / 2024 两套线路号方块参数
+- 支持在页面中切换 2020 / 2025 两套线路号方块参数
 - 支持输入线路号码并实时预览结果
 - 支持统一设置高度，并按比例缩放 SVG
 - 支持自动套用上海地铁标准线路色，也可手动覆盖前景色和背景色
@@ -63,7 +64,7 @@ npm run build
 ## 发布到 GitHub 前建议检查
 
 - 确认 UI 仓库名是否最终为 shmetro-line-id-block-ui
-- 确认两个生成仓库名是否最终为 shmetro-line-id-block-2020-svg-generator 与 shmetro-line-id-block-2024-svg-generator
+- 确认两个生成仓库名是否最终为 shmetro-line-id-block-2020-svg-generator 与 shmetro-line-id-block-2025-svg-generator
 - 确认 [package.json](package.json) 中引用的两个 npm 包版本与实际已发布版本一致
 - 补充仓库描述、topics、预览截图和发布说明
 - 配置实际远程仓库后再推送 main 分支

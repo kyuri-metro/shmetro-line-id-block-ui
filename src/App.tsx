@@ -52,7 +52,7 @@ function downloadSvg(fileName: string, svgContent: string) {
 
 function App() {
   const [themeMode, setThemeMode] = useState<ThemeMode>(() => getInitialThemeMode())
-  const [version, setVersion] = useState<BadgeVersion>('2024')
+  const [version, setVersion] = useState<BadgeVersion>('2025')
   const [lineNumber, setLineNumber] = useState('16')
   const [badgeHeight, setBadgeHeight] = useState('100')
   const [useShanghaiMetroColors, setUseShanghaiMetroColors] = useState(true)
@@ -170,7 +170,7 @@ function App() {
         <p className="lead">生成并导出上海地铁风格线路号方块 SVG。</p>
         <div className="docs-callout">
           <strong>关于本页</strong>
-          <p>支持切换 2020 / 2024 两套参数，并导出标准 SVG。</p>
+          <p>支持切换 2020 / 2025 两套参数，并导出标准 SVG。</p>
         </div>
         <div className="inline-links" aria-label="外部链接">
           <a href="https://github.com/Unnamed2964/kyuri-shmetro-line-id-block-generator" target="_blank" rel="noreferrer">
@@ -220,7 +220,7 @@ function App() {
               onChange={(event) => setVersion(event.target.value as BadgeVersion)}
             >
               <option value="2020">2020</option>
-              <option value="2024">2024</option>
+              <option value="2025">2025</option>
             </select>
           </label>
 
