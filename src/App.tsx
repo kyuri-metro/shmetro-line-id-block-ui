@@ -176,7 +176,7 @@ function App() {
           <a href="https://github.com/Unnamed2964/kyuri-shmetro-line-id-block-generator" target="_blank" rel="noreferrer">
             旧版 GitHub 仓库
           </a>
-          <a href="https://github.com/Unnamed2964" target="_blank" rel="noreferrer">
+          <a href="https://github.com/kyuri-metro/shmetro-line-id-block-ui" target="_blank" rel="noreferrer">
             GitHub 主页
           </a>
           <a href="https://umamichi.moe/" target="_blank" rel="noreferrer">
