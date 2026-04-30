@@ -8,7 +8,7 @@
 - -2020-svg-generator：2020 版 SVG 生成逻辑仓库
 - -2024-svg-generator：2024 版 SVG 生成逻辑仓库
 
-当前 UI 通过依赖两个独立的 SVG 生成仓库来完成 2020 / 2024 两套导出。
+当前 UI 通过依赖两个已发布的 SVG 生成 npm 包来完成 2020 / 2024 两套导出。
 
 ## 统一参数规格
 
@@ -64,7 +64,7 @@ npm run build
 
 - 确认 UI 仓库名是否最终为 shmetro-line-id-block-ui
 - 确认两个生成仓库名是否最终为 shmetro-line-id-block-2020-svg-generator 与 shmetro-line-id-block-2024-svg-generator
-- 如果改为真实 GitHub 依赖，请把 [package.json](package.json) 中的 file 依赖切换为正式版本号
+- 确认 [package.json](package.json) 中引用的两个 npm 包版本与实际已发布版本一致
 - 补充仓库描述、topics、预览截图和发布说明
 - 配置实际远程仓库后再推送 main 分支
 
