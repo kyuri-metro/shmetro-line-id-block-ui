@@ -23,7 +23,7 @@
   "dependencies": {
     "@kyuri-metro/shmetro-line-id-block-2020-svg-generator": "^0.1.1",
     "@kyuri-metro/shmetro-line-id-block-2025-svg-generator": "^0.1.1",
-    "@umamichi-ui/common-css": "^0.1.4",
+    "@umamichi-ui/common-css": "^0.1.6",
     "react": "^19.2.5",
     "react-dom": "^19.2.5"
   },
