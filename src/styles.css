@@ -14,6 +14,10 @@
   margin-bottom: 0;
 }
 
+.generator-page .page-header {
+  border-bottom-color: var(--site-content-border);
+}
+
 .docs-callout strong {
   display: block;
   margin-bottom: 6px;
