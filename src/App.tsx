@@ -326,7 +326,23 @@ function App() {
       <section className="panel notes-section" aria-labelledby="notes-title">
         <h2 id="notes-title">说明</h2>
         <p>
-          本工具的设计参数基于对实拍照片与 SVG 资料的视觉反推，不代表上海申通地铁集团有限公司的任何企业视觉标准或官方规范。
+          本工具的设计参数基于对实拍照片与 SVG 资料的视觉反推（
+          <a
+            href="https://github.com/kyuri-metro/shmetro-line-id-block-2020-svg-generator/tree/main/docs"
+            target="_blank"
+            rel="noreferrer"
+          >
+            2020
+          </a>
+          ；
+          <a
+            href="https://github.com/kyuri-metro/shmetro-line-id-block-2025-svg-generator/tree/main/docs"
+            target="_blank"
+            rel="noreferrer"
+          >
+            2025
+          </a>
+          ），不代表上海申通地铁集团有限公司的任何企业视觉标准或官方规范。
         </p>
         <p>输出结果仅供个人学习、参考及非商业用途，请勿将其用于任何官方或商业场合。</p>
       </section>
