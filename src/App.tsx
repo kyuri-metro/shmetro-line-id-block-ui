@@ -192,10 +192,6 @@ function App() {
         </div>
         <h1>上海地铁线路号方块生成器</h1>
         <p className="lead">生成并导出上海地铁风格线路号方块 SVG。</p>
-        <div className="docs-callout">
-          <strong>关于本页</strong>
-          <p>支持切换 2020 / 2025 两套参数，并导出标准 SVG。</p>
-        </div>
         <div className="inline-links" aria-label="外部链接">
           <a href="https://github.com/kyuri-metro/shmetro-line-id-block-ui" target="_blank" rel="noreferrer">
             GitHub 仓库
