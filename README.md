@@ -1,5 +1,12 @@
 # 上海地铁线路号方块生成器 UI
 
+[![React](https://img.shields.io/badge/React-19-149eca?logo=react&logoColor=white)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-6-3178c6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Deploy: Cloudflare](https://img.shields.io/badge/Deploy-Cloudflare-f38020?logo=cloudflare&logoColor=white)](https://shmetro-line-id-block-generator-v2.umamichi.moe/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-0f766e.svg)](LICENSE)
+
+在线预览：https://shmetro-line-id-block-generator-v2.umamichi.moe/
+
 > 以下内容为 GPT 5.4 生成，但经过人工正确性检查，你可以作为参考
 
 这是 kyuri-metro 组织下的 UI 仓库，负责预览与导出上海地铁线路号方块 SVG。
