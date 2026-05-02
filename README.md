@@ -13,12 +13,13 @@
 
 - -ui：当前仓库，负责页面、表单、实时预览、导出与字体检测
 - -2020-svg-generator：2020 版 SVG 生成逻辑仓库
+- -2020-type-2-svg-generator：2020 type 2 版 SVG 生成逻辑仓库
 - -2025-svg-generator：2025 版 SVG 生成逻辑仓库
 
-当前 UI 通过依赖两个已发布的 SVG 生成 npm 包来完成 2020 / 2025 两套导出。
+当前 UI 通过依赖三个已发布的 SVG 生成 npm 包，来完成 2020 / 2020 type 2 / 2025 三套导出。
 
 ## 统一参数规格
-支持在页面中切换 2020 / 2025 两套线路号方块参数
+支持在页面中切换 2020 / 2020 type 2 / 2025 三套线路号方块参数
 
 - 前景色 foreground
 - 背景色 background
@@ -30,13 +31,19 @@
 - @kyuri-metro/shmetro-line-id-block-2020-svg-generator
 - @kyuri-metro/shmetro-line-id-block-2025-svg-generator
 
+当前 UI 侧额外使用的第三个独立 npm 包为：
+
+- @kyuri-metro/shmetro-line-id-block-2020-type-2-svg-generator
+
+其中 2020 type 2 是后来发现的第二种类似 2020 的独立样式，不是 2020 样式的兼容性适配版。
+
 统一导出入口位于：
 
 - [src/lineIdGenerators.ts](src/lineIdGenerators.ts)
 
 ## 当前特性
 
-- 支持在页面中切换 2020 / 2025 两套线路号方块参数
+- 支持在页面中切换 2020 / 2020 type 2 / 2025 三套线路号方块参数
 - 支持输入线路号码并实时预览结果
 - 支持统一设置高度，并按比例缩放 SVG
 - 支持自动套用上海地铁标准线路色，也可手动覆盖前景色和背景色
@@ -47,12 +54,12 @@
 ## 项目结构
 
 - [src/App.tsx](src/App.tsx)：页面结构与交互逻辑
-- [src/lineIdGenerators.ts](src/lineIdGenerators.ts)：UI 侧对外统一入口，内部转发到两个独立组件仓库
+- [src/lineIdGenerators.ts](src/lineIdGenerators.ts)：UI 侧对外统一入口，内部转发到三个独立组件仓库
 - [src/lineIdUiShared.ts](src/lineIdUiShared.ts)：UI 侧本地校验与上海地铁配色逻辑
 - [src/arialSignature.ts](src/arialSignature.ts)：系统 Arial 检测逻辑
 - [src/styles.css](src/styles.css)：项目特有样式
 
-参考资料现已分别迁移到两个 SVG 生成仓库内的 docs 目录。
+参考资料现已分别迁移到三个 SVG 生成仓库内的 docs 目录。
 
 ## 本地开发
 
@@ -71,8 +78,8 @@ npm run build
 ## 发布到 GitHub 前建议检查
 
 - 确认 UI 仓库名是否最终为 shmetro-line-id-block-ui
-- 确认两个生成仓库名是否最终为 shmetro-line-id-block-2020-svg-generator 与 shmetro-line-id-block-2025-svg-generator
-- 确认 [package.json](package.json) 中引用的两个 npm 包版本与实际已发布版本一致
+- 确认三个生成仓库名是否最终为 shmetro-line-id-block-2020-svg-generator、shmetro-line-id-block-2020-type-2-svg-generator 与 shmetro-line-id-block-2025-svg-generator
+- 确认 [package.json](package.json) 中三个 npm 包版本与实际已发布版本一致
 - 补充仓库描述、topics、预览截图和发布说明
 - 配置实际远程仓库后再推送 main 分支
 
