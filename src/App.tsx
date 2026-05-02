@@ -205,6 +205,30 @@ function App() {
         </div>
         <h1>上海地铁线路号方块生成器</h1>
         <p className="lead">生成并导出上海地铁风格线路号方块 SVG。</p>
+        <section className="package-links-callout" aria-label="npm 包链接">
+          <strong>在项目里直接调用生成函数</strong>
+          <p>在线试用对应的两个 npm 包如下，分别覆盖 2025 与 2020 样式。</p>
+          <div className="package-link-grid">
+            <a
+              className="package-link-card"
+              href="https://www.npmjs.com/package/@kyuri-metro/shmetro-line-id-block-2025-svg-generator"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span className="package-link-label">2025 样式 npm 包</span>
+              <span className="package-link-name">@kyuri-metro/shmetro-line-id-block-2025-svg-generator</span>
+            </a>
+            <a
+              className="package-link-card"
+              href="https://www.npmjs.com/package/@kyuri-metro/shmetro-line-id-block-2020-svg-generator"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span className="package-link-label">2020 样式 npm 包</span>
+              <span className="package-link-name">@kyuri-metro/shmetro-line-id-block-2020-svg-generator</span>
+            </a>
+          </div>
+        </section>
         <div className="inline-links" aria-label="外部链接">
           <a href="https://github.com/kyuri-metro/shmetro-line-id-block-ui" target="_blank" rel="noreferrer">
             GitHub 仓库
