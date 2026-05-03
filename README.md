@@ -16,7 +16,7 @@
 - -2020-type-2-svg-generator：2020 type 2 版 SVG 生成逻辑仓库
 - -2025-svg-generator：2025 版 SVG 生成逻辑仓库
 
-当前 UI 通过依赖三个已发布的 SVG 生成 npm 包，来完成 2020 / 2020 type 2 / 2025 三套导出。
+当前 UI 通过依赖三个已发布的 SVG 生成 npm 包，来完成 2020 type 2 / 2020 / 2025 三套导出。
 
 ## 统一参数规格
 支持在页面中切换 2020 / 2020 type 2 / 2025 三套线路号方块参数
@@ -26,14 +26,11 @@
 - 线路号 lineNumber，范围为 0 至 99
 - 高度 height
 
-当前 UI 侧使用的两个独立 npm 包为：
-
-- @kyuri-metro/shmetro-line-id-block-2020-svg-generator
-- @kyuri-metro/shmetro-line-id-block-2025-svg-generator
-
-当前 UI 侧额外使用的第三个独立 npm 包为：
+当前 UI 侧使用的三个独立 npm 包为：
 
 - @kyuri-metro/shmetro-line-id-block-2020-type-2-svg-generator
+- @kyuri-metro/shmetro-line-id-block-2020-svg-generator
+- @kyuri-metro/shmetro-line-id-block-2025-svg-generator
 
 其中 2020 type 2 是后来发现的第二种类似 2020 的独立样式，不是 2020 样式的兼容性适配版。
 
@@ -43,13 +40,12 @@
 
 ## 当前特性
 
-- 支持在页面中切换 2020 / 2020 type 2 / 2025 三套线路号方块参数
+- 支持在页面中切换 2020 type 2 / 2020 / 2025 三套线路号方块参数
 - 支持输入线路号码并实时预览结果
-- 支持统一设置高度，并按比例缩放 SVG
+- 支持设置高度，并按比例缩放 SVG
 - 支持自动套用上海地铁标准线路色，也可手动覆盖前景色和背景色
-- 支持导出标准 SVG
-- 内置系统 Arial 检测，降低不同设备上的预览回退风险
-- UI 基础层复用 @umamichi-ui/common-css，并参考 njmetro-railmap-creator 的页面结构与交互节奏
+- 支持导出 SVG
+- 内置系统 Arial 检测，检测不同设备上的预览回退风险
 
 ## 项目结构
 
@@ -75,35 +71,17 @@ npm run lint
 npm run build
 ```
 
-## 发布到 GitHub 前建议检查
-
-- 确认 UI 仓库名是否最终为 shmetro-line-id-block-ui
-- 确认三个生成仓库名是否最终为 shmetro-line-id-block-2020-svg-generator、shmetro-line-id-block-2020-type-2-svg-generator 与 shmetro-line-id-block-2025-svg-generator
-- 确认 [package.json](package.json) 中三个 npm 包版本与实际已发布版本一致
-- 补充仓库描述、topics、预览截图和发布说明
-- 配置实际远程仓库后再推送 main 分支
-
 ## 设计与免责声明
 
 本工具中的参数来自对实拍照片和现有 SVG 资料的视觉逆向推导，不代表上海申通地铁集团有限公司的官方视觉标准或正式规范。
 
 输出结果仅供个人学习、参考及非商业用途，请勿将其用于任何官方或商业场合。
 
-## UI 依赖约定
-
-本项目的 UI 基础层依赖 @umamichi-ui/common-css。
-
-- 入口在 [src/main.tsx](src/main.tsx) 中直接引入 @umamichi-ui/common-css
-- 共享 token、基础布局、表单和按钮样式优先使用该包提供的能力
-- [src/styles.css](src/styles.css) 仅保留本项目特有样式，不复制公共基础层
-
-如果后续有新的跨项目 UI 原语需求，优先沉淀到 @umamichi-ui/common-css，再回到具体项目接入。
-
 ## 许可证
 
 [MIT License](LICENSE)
 
-文档与说明文字如需单独声明文字许可证，按当前偏好优先使用 CC BY-SA 4.0。
+docs/ 下的参考图片和其他文件，采用 CC BY-SA 4.0。
 
 ## 作者
 
