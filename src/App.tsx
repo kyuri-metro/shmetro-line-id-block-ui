@@ -412,8 +412,8 @@ function App() {
           >
             <div className="example-modal-header">
               <div>
-                <h2 id="example-modal-title">参考样例</h2>
-                <p className="panel-subtitle">以下图片用于对照当前已整理完成的 2020、2020 type 2 与 2025 三种样式。</p>
+                <h2 id="example-modal-title">输出示例</h2>
+                <p className="panel-subtitle">以下图片分别为本工具 2020、2020 type 2 与 2025 三种样式的输出。</p>
               </div>
               <button type="button" className="icon-button" aria-label="关闭示例浮窗" onClick={() => setIsExampleModalOpen(false)}>
                 ×
