@@ -213,35 +213,23 @@ function App() {
         <section className="package-links-callout" aria-label="npm 包链接">
           <strong>在项目里直接调用生成函数</strong>
           <p>当前三种样式都已具备独立 npm 包，可分别用于 2020、2020 type 2 与 2025 三套输出。</p>
-          <div className="package-link-grid">
-            <a
-              className="package-link-card"
-              href="https://www.npmjs.com/package/@kyuri-metro/shmetro-line-id-block-2020-type-2-svg-generator"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span className="package-link-label">2020 type 2 样式 npm 包</span>
-              <span className="package-link-name">@kyuri-metro/shmetro-line-id-block-2020-type-2-svg-generator</span>
-            </a>
-            <a
-              className="package-link-card"
-              href="https://www.npmjs.com/package/@kyuri-metro/shmetro-line-id-block-2020-svg-generator"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span className="package-link-label">2020 样式 npm 包</span>
-              <span className="package-link-name">@kyuri-metro/shmetro-line-id-block-2020-svg-generator</span>
-            </a>
-            <a
-              className="package-link-card"
-              href="https://www.npmjs.com/package/@kyuri-metro/shmetro-line-id-block-2025-svg-generator"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span className="package-link-label">2025 样式 npm 包</span>
-              <span className="package-link-name">@kyuri-metro/shmetro-line-id-block-2025-svg-generator</span>
-            </a>
-          </div>
+          <ul className="package-link-list">
+            <li>
+              <a href="https://www.npmjs.com/package/@kyuri-metro/shmetro-line-id-block-2020-type-2-svg-generator" target="_blank" rel="noreferrer">
+                @kyuri-metro/shmetro-line-id-block-2020-type-2-svg-generator
+              </a>
+            </li>
+            <li>
+              <a href="https://www.npmjs.com/package/@kyuri-metro/shmetro-line-id-block-2020-svg-generator" target="_blank" rel="noreferrer">
+                @kyuri-metro/shmetro-line-id-block-2020-svg-generator
+              </a>
+            </li>
+            <li>
+              <a href="https://www.npmjs.com/package/@kyuri-metro/shmetro-line-id-block-2025-svg-generator" target="_blank" rel="noreferrer">
+                @kyuri-metro/shmetro-line-id-block-2025-svg-generator
+              </a>
+            </li>
+          </ul>
         </section>
         <div className="inline-links" aria-label="外部链接">
           <a href="https://github.com/kyuri-metro/shmetro-line-id-block-ui" target="_blank" rel="noreferrer">
