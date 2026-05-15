@@ -1,35 +1,33 @@
-# 上海地铁线路号方块生成器 UI（已归档）
+# 上海地铁线路号方块生成器 UI
 
 [![React](https://img.shields.io/badge/React-19-149eca?logo=react&logoColor=white)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-6-3178c6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Storybook](https://img.shields.io/badge/试用-Storybook-FF4785?logo=storybook&logoColor=white)](https://kyuri-metro-storybook.umamichi.moe/)
+[![Deploy: Cloudflare](https://img.shields.io/badge/Deploy-Cloudflare-f38020?logo=cloudflare&logoColor=white)](https://shmetro-line-id-block-generator-v2.umamichi.moe/)
+[![Storybook](https://img.shields.io/badge/预览-Storybook-FF4785?logo=storybook&logoColor=white)](https://kyuri-metro-storybook.umamichi.moe/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-0f766e.svg)](LICENSE)
 
-> 以下内容为 GPT 5.4 生成，但经过人工正确性检查，你可以作为参考
+在线预览（旧版，不再更新）：https://shmetro-line-id-block-generator-v2.umamichi.moe/
 
-**本仓库已归档。** 三套样式（2020、2020 type 2、2025）的交互预览与导出已迁移至 Storybook：
+**npm 包交互预览请使用 Storybook：** https://kyuri-metro-storybook.umamichi.moe/
 
 | 样式 | Storybook |
 | --- | --- |
-| 2025 | [打开文档](https://kyuri-metro-storybook.umamichi.moe/?path=/docs/kyuri-metro-shmetro-line-id-block-2025-svg-generator--docs) |
-| 2020 | [打开文档](https://kyuri-metro-storybook.umamichi.moe/?path=/docs/kyuri-metro-shmetro-line-id-block-2020-svg-generator--docs) |
-| 2020 type 2 | [打开文档](https://kyuri-metro-storybook.umamichi.moe/?path=/docs/kyuri-metro-shmetro-line-id-block-2020-type-2-svg-generator--docs) |
+| 2025 | [打开](https://kyuri-metro-storybook.umamichi.moe/?path=/docs/kyuri-metro-shmetro-line-id-block-2025-svg-generator--docs) |
+| 2020 | [打开](https://kyuri-metro-storybook.umamichi.moe/?path=/docs/kyuri-metro-shmetro-line-id-block-2020-svg-generator--docs) |
+| 2020 样式 2 | [打开](https://kyuri-metro-storybook.umamichi.moe/?path=/docs/kyuri-metro-shmetro-line-id-block-2020-type-2-svg-generator--docs) |
 
-npm 包（生成逻辑，非 UI）：
+> 以下内容为 GPT 5.4 生成，但经过人工正确性检查，你可以作为参考
 
-- [@kyuri-metro/shmetro-line-id-block-2025-svg-generator](https://www.npmjs.com/package/@kyuri-metro/shmetro-line-id-block-2025-svg-generator)
-- [@kyuri-metro/shmetro-line-id-block-2020-svg-generator](https://www.npmjs.com/package/@kyuri-metro/shmetro-line-id-block-2020-svg-generator)
-- [@kyuri-metro/shmetro-line-id-block-2020-type-2-svg-generator](https://www.npmjs.com/package/@kyuri-metro/shmetro-line-id-block-2020-type-2-svg-generator)
+本仓库 GitHub 已归档（只读）。Cloudflare 上的独立预览页仍保持部署，但不再更新；参数调节、多格式导出请使用 Storybook。
 
-Storybook 源码：<https://github.com/kyuri-metro/storybook>
+- UI 仓库（本仓库，已归档）：页面、表单、旧版预览
+- Storybook：<https://github.com/kyuri-metro/storybook>
+- SVG 生成器 npm 包：
+  - [@kyuri-metro/shmetro-line-id-block-2025-svg-generator](https://www.npmjs.com/package/@kyuri-metro/shmetro-line-id-block-2025-svg-generator)
+  - [@kyuri-metro/shmetro-line-id-block-2020-svg-generator](https://www.npmjs.com/package/@kyuri-metro/shmetro-line-id-block-2020-svg-generator)
+  - [@kyuri-metro/shmetro-line-id-block-2020-type-2-svg-generator](https://www.npmjs.com/package/@kyuri-metro/shmetro-line-id-block-2020-type-2-svg-generator)
 
----
-
-## 历史说明
-
-本仓库曾提供上海地铁线路号方块 SVG 的页面预览与导出。旧版在线地址 `https://shmetro-line-id-block-generator-v2.umamichi.moe/` 已不再维护。
-
-2020 type 2 是后来发现的第二种类似 2020 的独立样式，不是 2020 样式的兼容性适配版。
+2020 样式 2 是后来发现的第二种类似 2020 的独立样式，不是 2020 样式的兼容性适配版。
 
 ## 许可证
 

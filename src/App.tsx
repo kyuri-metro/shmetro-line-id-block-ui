@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState, type ChangeEvent } from 'react'
+import { StorybookMigrationNotice } from './components/StorybookMigrationNotice'
 import { detectWindowsArial } from './arialSignature'
 import { generateLineBadgeSvg, type BadgeVersion } from './lineIdGenerators'
 import { getShanghaiMetroPalette, parseLineNumber } from './lineIdUiShared'
@@ -196,8 +197,24 @@ function App() {
     downloadSvg(`${fileStem}.svg`, previewSvg)
   }
 
+  const storybookLinks = [
+    {
+      label: '2025 样式',
+      href: 'https://kyuri-metro-storybook.umamichi.moe/?path=/docs/kyuri-metro-shmetro-line-id-block-2025-svg-generator--docs',
+    },
+    {
+      label: '2020 样式',
+      href: 'https://kyuri-metro-storybook.umamichi.moe/?path=/docs/kyuri-metro-shmetro-line-id-block-2020-svg-generator--docs',
+    },
+    {
+      label: '2020 样式 2',
+      href: 'https://kyuri-metro-storybook.umamichi.moe/?path=/docs/kyuri-metro-shmetro-line-id-block-2020-type-2-svg-generator--docs',
+    },
+  ] as const
+
   return (
     <main className="page-shell generator-page">
+      <StorybookMigrationNotice links={storybookLinks} />
       <header className="page-header">
         <div className="page-meta-row">
           <p className="eyebrow">shmetro line id block generator</p>

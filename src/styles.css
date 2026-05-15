@@ -1,3 +1,59 @@
+.storybook-migration-notice {
+  display: grid;
+  gap: 10px;
+  margin: 0 0 20px;
+  padding: 16px 18px;
+  border: 2px solid var(--site-accent);
+  background: var(--site-surface);
+}
+
+.storybook-migration-notice-eyebrow {
+  margin: 0;
+  color: var(--site-accent);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.storybook-migration-notice-lead {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+.storybook-migration-notice-cta {
+  margin: 0;
+}
+
+.storybook-migration-notice-button {
+  display: inline-block;
+  padding: 8px 14px;
+  border: 1px solid var(--site-accent);
+  border-radius: var(--radius-md);
+  background: var(--site-bg);
+  color: var(--site-accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.storybook-migration-notice-button:hover {
+  background: var(--site-surface);
+}
+
+.storybook-migration-notice-links {
+  margin: 0;
+  padding-left: 1.2em;
+  line-height: 1.6;
+}
+
+.storybook-migration-notice-footnote {
+  margin: 0;
+  color: var(--site-muted-fg);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
 .generator-page h1 {
   margin-bottom: 8px;
   font-size: clamp(1.8rem, 4vw, 2.7rem);
